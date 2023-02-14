@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Boarding Pass</title>
+</head>
+<body>
+  <main class="boarding"> 
+    <h1 class="boarding-title">
+      Cartão de embarque
+    </h1>
+    <div class="ticket">
+      <div class="ticket-info">
+        <div class="ticket-info-header">
+          <div class="flight-number">
+            <span>Voo</span>
+            <p>RS995</p>
+          </div>
+          <div class="flight-date">
+            <span>Data</span>
+            <p>23/05/2023</p>
+          </div>
+        </div>
+        <div class="ticket-info-content">
+          <div class="departure">
+            <span>Belo Horizonte, Brasil</span>
+            <p class="airport">CNF</p>
+            <p class="time">17:00</p>
+          </div>
+          <ion-icon class="airplane-icon" name="airplane"></ion-icon>
+          <div class="arrival">
+            <span class="city">São Francisco, EUA</span>
+            <p class="airport">SFO</p>
+            <p class="time">04:48<span class="gmt">+1</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="ticket-passenger">
+        <div class="ticket-passenger-info">
+          <span>Passageiro</span>
+          <p>Bruno Vinícius</p>
+        </div>
+        <div class="ticket-passenger-seat">
+          <span>Assento</span>
+          <p>28A</p>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="ticket-boarding">
+        <div class="ticket-boarding-info">
+          <span>Embarque</span>
+          <p class="departure-time">16:15</p>
+          <span>Terminal</span>
+          <p>2</p>
+          <span>Portão</span>
+          <p>12</p>
+        </div>
+        <div class="ticket-boarding-qrcode">
+          <img src="./assets/img/qr_code.png" alt="QR Code Borading Pass">
+          <span>Grupo de embarque: 3</span>
+        </div>
+        <p class="warning"><span>Atenção:</span> o portão fecha 16:45</pwarning>
+      </div>
+    </div>
+    <p class="disclaimer">Qualquer problema procure o balcão de atendimento da sua companhia aérea</p>
+  </main>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
