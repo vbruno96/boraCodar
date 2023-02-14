@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Rubik', sans-serif;
+}
+
+:root {
+  font-size: 62.5%; /* 1rem == 10px */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #807ECE 0%, #8E7ECE 100%);
+  color: #EBEBEB;
+  font-size: 1.6rem;
+}
+
+.calculator {
+  display: grid;
+  grid-template-rows: max-content 1fr;
+  gap: 2.6rem;
+  width: 35.6rem;
+  height: 56.6rem;
+  padding: 5.4rem 3.2rem 3.2rem 3.2rem;
+  background-color: #2D2A37;
+  border-radius: 4.8rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04), 0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26), 0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1), inset 0px -4px 5px rgba(0, 0, 0, 0.22)
+}
+
+.calculator .display {
+  padding-left: 2.2rem;
+  padding-right: 1.8rem;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  text-align: right;
+  color: #6B6B6B;
+}
+
+.calculator .display .result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: .8rem;
+}
+
+.calculator .display .result > :not(i) {
+  color: #EBEBEB;
+  font-size: 3.6rem;
+  line-height: 5.4rem;
+}
+
+.calculator .keyboard {
+  display: grid;
+  column-gap: 1.2rem;
+  row-gap: 1.2rem;
+  grid-template-columns: 6.4rem 6.4rem 6.4rem 6.4rem;
+  grid-template-rows: 6.4rem 6.4rem 6.4rem 6.4rem;
+}
+
+.calculator .keyboard .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%),
+linear-gradient(0deg, #2D2A37, #2D2A37);
+  border: none;
+  border-radius: 999rem;
+  color: #EBEBEB;
+  font-size: 2.4rem;
+  box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04), 0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26), 0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+  transition: box-shadow .2s ease-in-out;
+}
+
+.calculator .keyboard .btn:active { 
+  box-shadow: none;
+}
+
+.calculator .keyboard .btn.clear {
+  color: #975DFA;
+}
+
+.calculator .keyboard .btn.operation {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #462878;
+}
+
+.calculator .keyboard .btn.equal {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%), #7F45E2;
+}
