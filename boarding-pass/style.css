@@ -8,204 +8,171 @@
 }
 
 body {
-  width: 100vw;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%) no-repeat fixed;
   font-family: 'Rubik', sans-serif;
-  background: linear-gradient(167.96deg, #8257E5 0%, #271A45 100%);
-}
-
-.boarding {
-  width: 327px;
-  color: #FFF;
-}
-
-.boarding > .boarding-title {
-  margin-bottom: 1.25rem;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
   letter-spacing: -.02em;
 }
 
-.boarding .ticket {
-  width: 100%;
-  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
-  color: rgba(0, 0, 0, 0.88);
+.grid {
+  display: grid;
 }
 
-.ticket .ticket-info, .ticket .ticket-passenger, .ticket .ticket-boarding {
-  width: 100%;
-  background-color: #FFF;
+.column {
+  grid-auto-flow: column;
+}
+
+.text-right {
+  text-align: right;
+}
+
+h1, strong {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  color: #FFF;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.64);
+  font-size: .875rem;
+  line-height: 1.063rem;
+}
+
+strong {
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 1rem;
+  line-height: 1.188rem;
+}
+
+section {
+  background: #FFF;
   padding: 1.5rem 2rem;
   border-radius: 1.5rem;
 }
 
-.ticket .ticket-passenger, .ticket .ticket-boarding {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#boarding-pass {
+  margin: auto;
 }
 
-.ticket .ticket-info .ticket-info-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
+#ticket {
+  margin-top: 1.25rem;
+  filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
 }
 
-.ticket span {
-  font-size: .875rem;
-  color: rgba(0, 0, 0, 0.64);
+.top {
+  gap: 1.5rem;
 }
 
-.ticket .ticket-info .ticket-info-header span:last-of-type {
-  text-align: end;
+.departure, .arrival {
+  width: 7.813rem;
 }
 
-.ticket .ticket-info .ticket-info-header p {
-  font-weight: 500;
+.departure strong,
+.arrival strong {
+  font-size: 2.5rem;
+  line-height: 2.938rem;
 }
 
-.ticket .ticket-info .ticket-info-content {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+.airplane {
+  align-self: center;
 }
 
-.ticket .ticket-info .ticket-info-content .airplane-icon {
-  position: absolute;
-  top: 1.844rem;
-  left: 7.469rem;
+.airplane ion-icon {
   font-size: 1.5rem;
 }
 
-.ticket-info-content .departure .airport, .ticket-info-content .arrival .airport {
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
-.ticket-info-content .arrival {
-  text-align: end;
-}
-
-.ticket-info-content .arrival .time {
-  display: flex;
-  justify-content: end;
-}
-
-.ticket-info-content .arrival .time .gmt {
+.top time {
   color: rgba(0, 0, 0, 0.8);
+}
+
+.top time sup {
   font-weight: 500;
   font-size: .625rem;
+  line-height: .75rem;
 }
 
-.ticket-passenger p {
-  font-weight: 500;
+.middle {
+  border: 1px dashed rgba(0, 0, 0, 0.32);
+  border-left: 0;
+  border-right: 0;
 }
 
-.ticket-passenger .ticket-passenger-seat p {
-  text-align: end;
+.bottom .container {
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.ticket .divider {
-  margin: 0 auto;
-  width: 80%;
-  border-bottom: 1px dashed rgba(0, 0, 0, .32);
-  background: #FFF;
+dl.grid {
+  gap: 1rem;
+  min-width: 5.938rem;
 }
 
-.ticket-boarding {
-  flex-wrap: wrap;
-}
-
-.ticket-boarding .ticket-boarding-info .departure-time {
-  width: 3.375rem;
-  background: #633BBC;
-  border-radius: .5rem;
-  padding: .25rem .5rem;
-  color: #FFF;
-}
-
-.ticket-boarding .ticket-boarding-info p {
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-.ticket-boarding .ticket-boarding-qrcode {
-  width: min-content;
-}
-
-.ticket-boarding .ticket-boarding-qrcode span {
-  display: block;
-  text-align: center;
-}
-
-.ticket-boarding  .warning {
-  width: 100%;
-  margin-top: 1.5rem;
-  text-align: center;
-}
-
-.ticket-boarding .warning > span {
+dt time {
+  color: white;
   font-weight: 500;
   font-size: 1rem;
+  line-height: 1.188rem;
+  background: #633bbc;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  margin-top: 0.2rem;
+}
+
+.bottom > p {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
   color: rgba(0, 0, 0, 0.8);
 }
 
-.disclaimer {
-  margin-top: 1.5rem;
-  text-align: center;
-  line-height: 1.5rem;
-  font-size: .875rem;
-  opacity: .64;
+.qr-code.grid {
+  justify-items: center;
 }
 
+footer {
+  font-size: .875rem;
+  line-height: 1.5rem;
+  color: white;
+  opacity: 0.64;
+  width: 16.875rem;
+  text-align: center;
+  margin: 1.25rem auto;
+}
 
 @media (min-width: 1024px) {
-  .ticket {
-    overflow: hidden;
-  }
-
-  .ticket .ticket-info {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .ticket .ticket-passenger {
-    position: relative;
-    border-radius: 0;
-  }
-
-  .ticket .ticket-passenger::before,
-  .ticket .ticket-passenger::after,
-  .ticket .ticket-boarding::before,
-  .ticket .ticket-boarding::after {
-    position: absolute;
-    content: '';
-    top: -12px;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: #5B3D9F;
-    border-radius: 50%;
-  }
-
-  .ticket .ticket-passenger::after, .ticket .ticket-boarding::after {
-    right: -12px;
-  }
-
-  .ticket .ticket-passenger::before, .ticket .ticket-boarding::before {
-    left: -12px;
-  }
-
-  .ticket .ticket-boarding {
-    position: relative;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  section {
+    background: #FFF;
+    padding: 1.5rem 2rem;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    border-radius: 1.5rem 1.5rem 0 0;
   }
   
-  .ticket .divider {
-    width: 100%;
+  .top {  
+    --mask: radial-gradient(.75rem at .75rem bottom, #0000 93%, black) -.75rem;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
   }
+  
+  .middle {  
+    --mask: radial-gradient(.75rem at .75rem .75rem, #0000 93%, black) -.75rem -.75rem;
+    border-radius: 0;
+  }
+  
+  .bottom {
+    border-radius: 0 0 1.5rem 1.5rem;
+  
+    --mask: radial-gradient(.75rem at .75rem top, #0000 93%, black) -.75rem;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+  }  
 }
